@@ -1,0 +1,17 @@
+# Stage 1: Build the application
+FROM golang:1.16-alpine AS builder
+WORKDIR /app
+COPY main.go .
+RUN go build -o myapp .
+
+# Stage 2: Create the minimal final image
+FROM alpine:3.12
+WORKDIR /app
+COPY --from=builder /app/myapp .
+
+# Add a non-root user and switch to it
+RUN adduser -D pluralsight
+USER pluralsight
+
+# Command to run the application
+CMD ["./myapp"]
