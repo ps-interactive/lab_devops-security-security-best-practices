@@ -1,11 +1,11 @@
 # Start with a minimal base image
-FROM golang:1.16-alpine
+FROM golang:1.22-alpine
 
 # Set the working directory
 WORKDIR /app
 
 # Copy application files
-COPY main.go .
+COPY app .
 
 # Build the application
 RUN go build -o myapp .
