@@ -5,7 +5,7 @@ COPY app .
 RUN go build -o myapp .
 
 # Stage 2: Create the minimal final image
-FROM alpine:3.12
+FROM alpine:3.21
 WORKDIR /app
 COPY --from=builder /app/myapp .
 
