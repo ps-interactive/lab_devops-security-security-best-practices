@@ -2,8 +2,8 @@ import os
 import time
 
 def connect_to_database():
-    username = "myuser"
-    password = "hardcodedpassword"  # Vulnerable!
+    username = "ps-user"
+    password = "hardcoded-pass"  # Vulnerable!
     print(f"Connecting to database with user: {username}", flush=True)
     print(f"Connecting to database with password: {password}", flush=True)
     # Database connection logic here
