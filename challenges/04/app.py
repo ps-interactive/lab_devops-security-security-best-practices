@@ -4,8 +4,8 @@ import time
 def connect_to_database():
     username = "myuser"
     password = "hardcodedpassword"  # Vulnerable!
-    print(f"Connecting to database with user: {username}")
-    print(f"Connecting to database with password: {password}")
+    print(f"Connecting to database with user: {username}", flush=True)
+    print(f"Connecting to database with password: {password}", flush=True)
     # Database connection logic here
     time.sleep(3600)
 
