@@ -20,12 +20,12 @@ auto_auth {
 
 template {
   destination = "/app/secrets/db_user"
-  contents    = "{{ with secret \"secret/database\" }}{{ .Data.data.username }}{{ end }}"
+  contents    = "{{ with secret \"secret/data/database\" }}{{ .Data.data.username }}{{ end }}"
   perms       = 0600
 }
 
 template {
   destination = "/app/secrets/db_pass"
-  contents    = "{{ with secret \"secret/database\" }}{{ .Data.data.password }}{{ end }}"
+  contents    = "{{ with secret \"secret/data/database\" }}{{ .Data.data.password }}{{ end }}"
   perms       = 0600
 }
