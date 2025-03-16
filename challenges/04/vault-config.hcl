@@ -1,5 +1,9 @@
 pid_file = "/tmp/vault-agent.pid"
 
+vault {
+  address     = "http://127.0.0.1:8200"
+}
+
 listener "tcp" {
   address     = "127.0.0.1:8100"
   tls_disable = true # Disable TLS for local testing
