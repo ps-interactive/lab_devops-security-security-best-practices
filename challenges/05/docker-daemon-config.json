@@ -1,7 +1,4 @@
 {
   "live-restore": true,
-  "log-driver": "json-file",
-  "log-opts": {
-    "path": "/var/log/docker-containers.log"
-  }
+  "log-driver": "journald"
 }
