@@ -10,10 +10,9 @@ listener "tcp" {
 }
 
 auto_auth {
-  method "token" {
-    mount_path = "auth/token"
+  method "token_file" {
     config = {
-      token_file = "/vault/secrets/token"
+      token_file_path = "/vault/secrets/token"
     }
   }
 }
